@@ -16,13 +16,11 @@ class Controle {
             System.out.print("Nota de Beleza:");
             float Beleza = entradas.nextFloat();
 
-            float MediaPonderada = ((Simpatia*1) + (Elegancia*3) + (Beleza*4))/8;
 
             dados.setNome(nome);
             dados.setSimpatia(Simpatia);
             dados.setElegancia(Elegancia);
             dados.setBeleza(Beleza);
-            dados.setMediaPonderada(MediaPonderada);
             return dados;
     }
 
@@ -32,19 +30,18 @@ class Controle {
                 System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
                 System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
                 System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-                System.out.printf("Media Ponderada: %.2f", dados[i].getMediaPonderada());
+                System.out.printf("Media Ponderada: %.2f", dados[i].MediaPonderada());
              }
     }
 
     public void GetCandidata(Candidata dados[], String nome, int cont){ //Puxa todos os dados de acordo com o nome da candidata
-             
             for(int i=0;i<=cont-1;i++){
                 if(dados[i].getNome() == nome){
                     System.out.printf("\nNome: %s\n", dados[i].getNome());
                     System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
                     System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
                     System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-                    System.out.printf("Media Ponderada: %.2f\n", dados[i].getMediaPonderada());
+                    System.out.printf("Media Ponderada: %.2f\n", dados[i].MediaPonderada());
                 }
             }
     }
