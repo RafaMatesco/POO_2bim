@@ -25,36 +25,42 @@ class Controle {
     }
 
     public void GetCandidatas(Candidata dados[]){ //Puxa todos os dados de TODAS as candidatas
-            for(int i=0;i<=dados.length-1;i++){
+            int i = 0;
+            while (dados[i]!= null) {
                 System.out.printf("\nNome: %s\n", dados[i].getNome());
                 System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
                 System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
                 System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
                 System.out.printf("Media Ponderada: %.2f", dados[i].MediaPonderada());
-             }
+                i++;
+            }
     }
 
-    public void GetCandidata(Candidata dados[], String nome, int cont){ //Puxa todos os dados de acordo com o nome da candidata
-            for(int i=0;i<=cont-1;i++){
-                if(dados[i].getNome() == nome){
+    public void GetCandidata(Candidata dados[], String nome){ //Puxa todos os dados de acordo com o nome da candidata
+            int i = 0;    
+            while (dados[i]!= null){
+                if(dados[i].getNome().equals(nome)){
                     System.out.printf("\nNome: %s\n", dados[i].getNome());
                     System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
                     System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
                     System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
                     System.out.printf("Media Ponderada: %.2f\n", dados[i].MediaPonderada());
+                    break;
                 }
+                i++;
             }
     }
 
-    public Candidata UpdateCandidata(Candidata dados[], String nome){
-        int x = 0;
-            for(int i=0;i<=dados.length-1;i++){
-                if(nome == dados[i].getNome()){
+    public Candidata[] UpdateCandidata(Candidata dados[], String nome){
+            int x = 0;
+            int i = 0;
+            while (dados[i]!= null){
+                if(dados[i].getNome().equals(nome)){
                     dados[i] = SetCandidata(dados[i]);
-                    x = i ;
+                    break;
                 }
             }
-            return dados[x];
+            return dados;
     }
 
 }

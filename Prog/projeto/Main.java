@@ -21,18 +21,23 @@ public class Main {
                                         candidatas[cont] = new Candidata();
                                         candidatas[cont] = controle.SetCandidata(candidatas[cont]);
                                         cont++;
-
                                         break;
                                 case 2:
-                                        System.out.print("Digite o nome da candidata que deseja visualizar: ");
-                                        String nome2 = entradas.next();
-                                        controle.GetCandidata(candidatas, nome2, cont);
+                                        System.out.print("deseja visualizar todas as candidatas ou uma em especifico[2/1]:");
+                                        int respUsuario = Integer.parseInt(entradas.next());
 
+                                        if(respUsuario==1){
+                                                System.out.print("Digite o nome da candidata que deseja visualizar: ");
+                                                String nome2 = entradas.next();
+                                                controle.GetCandidata(candidatas, nome2);
+                                                break;
+                                        }
+                                        controle.GetCandidatas(candidatas);
                                         break;
                                 case 3:
                                         System.out.print("Digite o nome da candidata que deseja alterar: ");
                                         String nome3 = entradas.next();
-                                        candidatas[cont] = controle.UpdateCandidata(candidatas, nome3);
+                                        candidatas = controle.UpdateCandidata(candidatas, nome3);
 
                                         break;
                                 case 4:
