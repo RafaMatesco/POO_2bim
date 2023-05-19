@@ -4,6 +4,8 @@ class Candidata {
        private float Elegancia;
        private float Beleza;
        
+       public float MediaPonderada;
+       
        public void setNome(String nome){
                this.nome = nome;
        }
@@ -29,7 +31,9 @@ class Candidata {
        public float getBeleza(){
                return this.Beleza;
        }
+       
        public float MediaPonderada(){
-                return ((this.Simpatia*1) + (this.Elegancia*3) + (this.Beleza*4))/8;
+                this.MediaPonderada = ((this.Simpatia*1) + (this.Elegancia*3) + (this.Beleza*4))/8;
+                return this.MediaPonderada;
        }
 }
