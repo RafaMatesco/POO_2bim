@@ -19,7 +19,7 @@ public class Main {
                         switch(menu){
                                 case 1:
                                         candidatas[cont] = new Candidata();
-                                        candidatas[cont] = controle.SetCandidata(candidatas[cont]);
+                                        candidatas[cont] = controle.setCandidata(candidatas[cont]);
                                         cont++;
                                         break;
                                 case 2:
@@ -28,19 +28,23 @@ public class Main {
 
                                         if(respUsuario==1){
                                                 System.out.print("Digite o nome da candidata que deseja visualizar: ");
-                                                String nome2 = entradas.next();
-                                                controle.GetCandidata(candidatas, nome2);
+                                                String nomeConsult = entradas.next();
+                                                controle.getCandidata(candidatas, nomeConsult);
                                                 break;
                                         }
-                                        controle.GetCandidatas(candidatas);
+                                        controle.getCandidatas(candidatas);
                                         break;
                                 case 3:
                                         System.out.print("Digite o nome da candidata que deseja alterar: ");
-                                        String nome3 = entradas.next();
-                                        candidatas = controle.UpdateCandidata(candidatas, nome3);
+                                        String nomeUpdate = entradas.next();
+                                        candidatas = controle.updateCandidata(candidatas, nomeUpdate);
 
                                         break;
                                 case 4:
+                                                
+                                        System.out.print("Digite o nome da candidata que deseja alterar: ");
+                                        String nomeDelete = entradas.next();
+                                        candidatas = controle.deleteCandidata(candidatas, nomeDelete);
                                         
                                         break;
                                 case 5:
