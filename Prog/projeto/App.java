@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class App {
         
         public static void main(String args[]){
 
@@ -42,7 +42,7 @@ public class Main {
                                         break;
                                 case 4:
                                                 
-                                        System.out.print("Digite o nome da candidata que deseja alterar: ");
+                                        System.out.print("Digite o nome da candidata que deseja excluir: ");
                                         String nomeDelete = entradas.next();
                                         candidatas = controle.deleteCandidata(candidatas, nomeDelete);
                                         

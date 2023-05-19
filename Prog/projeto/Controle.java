@@ -1,83 +1,28 @@
-import java.util.*;
 
-class Controle {
-    private Scanner entradas = new Scanner(System.in); //scanner de entrada de dados
+class Controle {//scanner de entrada de dados
+
+    ServiceCandidata serviceCandidata = new ServiceCandidata();
 
     public Candidata setCandidata(Candidata dados){ //Seta os dados de uma candidata
-            System.out.print("Nome da candidata:");
-            String nome = entradas.next();
-
-            System.out.print("Nota de Simpatia:");
-            float Simpatia = entradas.nextFloat();
-
-            System.out.print("Nota de Elegancia:");
-            float Elegancia = entradas.nextFloat();
-
-            System.out.print("Nota de Beleza:");
-            float Beleza = entradas.nextFloat();
-
-
-            dados.setNome(nome);
-            dados.setSimpatia(Simpatia);
-            dados.setElegancia(Elegancia);
-            dados.setBeleza(Beleza);
+            dados = serviceCandidata.setCandidata(dados);
             return dados;
     }
 
     public void getCandidatas(Candidata dados[]){ //Puxa todos os dados de TODAS as candidatas
-            int i = 0;
-            while (dados[i]!= null) {
-                System.out.printf("\nNome: %s\n", dados[i].getNome());
-                System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
-                System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
-                System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-                System.out.printf("Media Ponderada: %.2f", dados[i].MediaPonderada());
-                i++;
-            }
+            serviceCandidata.getCandidatas(dados);
     }
 
     public void getCandidata(Candidata dados[], String nome){ //Puxa todos os dados de acordo com o nome da candidata
-            int i = 0;    
-            while (dados[i]!= null){
-                if(dados[i].getNome().equals(nome)){
-                    System.out.printf("\nNome: %s\n", dados[i].getNome());
-                    System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
-                    System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
-                    System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-                    System.out.printf("Media Ponderada: %.2f\n", dados[i].MediaPonderada());
-                    break;
-                }
-                i++;
-            }
+            serviceCandidata.getCandidata(dados, nome);
     }
 
     public Candidata[] updateCandidata(Candidata dados[], String nome){
-        int x = 0;
-        int i = 0;
-        while (dados[i]!= null){
-            if(dados[i].getNome().equals(nome)){
-                dados[i] = setCandidata(dados[i]);
-                break;
-            }
-        }
+        dados = serviceCandidata.updateCandidata(dados, nome);
         return dados;
     }
 
     public Candidata[] deleteCandidata(Candidata dados[], String nome){
-        int i = 0;
-        boolean deletado = false;
-        while (dados[i]!= null){
-            if(dados[i].getNome().equals(nome)){
-                deletado = true;
-               
-            }
-            if(deletado){
-                dados[i] = dados[i+1];
-            }
-            i++;
-        }
-        dados[i] = null;
+        dados = serviceCandidata.deleteCandidata(dados, nome);
         return dados;
     }
-
 }

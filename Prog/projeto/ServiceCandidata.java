@@ -1,0 +1,3 @@
+class ServiceCandidata extends DeleteCandidata{
+    
+}
