@@ -20,7 +20,6 @@ class App {
                         }else if(menu == 5){
                                 controle.relatar();
                         }else if(menu == 6){
-                                resp = false;
                                 break;
                         }else{
                                 System.out.println("Digite uma das opcoes corretamente");

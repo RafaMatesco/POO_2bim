@@ -16,11 +16,13 @@ class SetCandidata {
         System.out.print("Nota de Beleza:");
         float Beleza = entradas.nextFloat();
 
+        float mediaPond = ((Simpatia*1)+(Elegancia*3)+(Beleza*4))/8;
 
         dados.setNome(nome);
         dados.setSimpatia(Simpatia);
         dados.setElegancia(Elegancia);
         dados.setBeleza(Beleza);
+        dados.SetMedia(mediaPond);
         return dados;
 }
 }

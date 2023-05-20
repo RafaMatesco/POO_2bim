@@ -4,8 +4,6 @@ class Relatar extends DeleteCandidata{
         float valorAtual;
         int posicao;
         for(int index = 1; index<cont; index++){
-            System.out.print(index-1);
-            
             if(dados[index-1] != null){
                 valorAtual = dados[index].MediaPonderada;
                 posicao = index;

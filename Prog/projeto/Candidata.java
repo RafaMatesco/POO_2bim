@@ -3,8 +3,7 @@ class Candidata {
        private float Simpatia;
        private float Elegancia;
        private float Beleza;
-       
-       public float MediaPonderada;
+       private float MediaPonderada;
        
        public void setNome(String nome){
                this.nome = nome;
@@ -17,6 +16,9 @@ class Candidata {
        }
        public void setBeleza(float beleza){
                this.Beleza = beleza;
+       }
+       public void SetMedia(float mediaPonderada){
+                this.MediaPonderada = mediaPonderada;
        }
 
        public String getNome(){
@@ -31,9 +33,9 @@ class Candidata {
        public float getBeleza(){
                return this.Beleza;
        }
-       
-       public float MediaPonderada(){
-                this.MediaPonderada = ((this.Simpatia*1) + (this.Elegancia*3) + (this.Beleza*4))/8;
+       public float getMedia(){
                 return this.MediaPonderada;
        }
+       
+       
 }
