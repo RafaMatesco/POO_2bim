@@ -29,7 +29,9 @@ class Candidata {
        public float getBeleza(){
                return this.Beleza;
        }
-       public float MediaPonderada(){
-                return ((this.Simpatia*1) + (this.Elegancia*3) + (this.Beleza*4))/8;
+       public float MediaPonderada(Media medias){
+                float[] valores = {this.Beleza, this.Elegancia, this.Simpatia};
+                float[] pesos = {4,3,1}; 
+                return medias.MediaPonderada(valores,pesos);
        }
 }
