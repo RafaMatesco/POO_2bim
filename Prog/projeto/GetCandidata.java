@@ -7,7 +7,7 @@ class GetCandidata extends SetCandidata{
             System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
             System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
             System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-            System.out.printf("Media Ponderada: %.2f", dados[i].getMedia());
+            System.out.printf("Media Ponderada: %.2f\n\n", dados[i].getMedia());
             i++;
         }
 }
@@ -20,7 +20,7 @@ public void getCandidata(Candidata dados[], String nome){ //Puxa todos os dados 
                 System.out.printf("Nota de Simpatia: %.2f\n", dados[i].getSimpatia());
                 System.out.printf("Nota de Elegancia: %.2f\n", dados[i].getElegancia());
                 System.out.printf("Nota de Beleza: %.2f\n\n", dados[i].getBeleza());
-                System.out.printf("Media Ponderada: %.2f\n", dados[i].getMedia());
+                System.out.printf("Media Ponderada: %.2f\n\n", dados[i].getMedia());
                 break;
             }
             i++;

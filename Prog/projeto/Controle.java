@@ -21,8 +21,10 @@ class Controle {
             System.out.print("Digite o nome da candidata que deseja visualizar: ");
             String nomeConsult = entradas.next();
             serviceCandidata.getCandidataService(candidatas, nomeConsult);
+        }else{
+            serviceCandidata.getCandidatas(candidatas);
         }
-        serviceCandidata.getCandidatasService(candidatas);
+        
     }
 
     public void alterarCandidatas(){
