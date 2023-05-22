@@ -1,37 +1,41 @@
 class Candidata {
        private String nome;
-       private float Simpatia;
-       private float Elegancia;
-       private float Beleza;
+       private float simpatia;
+       private float elegancia;
+       private float beleza;
+       private float media;
        
        public void setNome(String nome){
                this.nome = nome;
        }
        public void setSimpatia(float simpatia){
-               this.Simpatia = simpatia;
+               this.simpatia = simpatia;
        }
        public void setElegancia(float elegancia){
-               this.Elegancia = elegancia;
+               this.elegancia = elegancia;
        }
        public void setBeleza(float beleza){
-               this.Beleza = beleza;
+               this.beleza = beleza;
        }
 
        public String getNome(){
                return this.nome;
        }
        public float getSimpatia(){
-               return this.Simpatia;
+               return this.simpatia;
        }
        public float getElegancia(){
-               return this.Elegancia;
+               return this.elegancia;
        }
        public float getBeleza(){
-               return this.Beleza;
+               return this.beleza;
        }
-       public float MediaPonderada(Media medias){
-                float[] valores = {this.Beleza, this.Elegancia, this.Simpatia};
+       public void setMediaPonderada(Media medias){
+                float[] valores = {this.beleza, this.elegancia, this.simpatia};
                 float[] pesos = {4,3,1}; 
-                return medias.MediaPonderada(valores,pesos);
+                this.media = medias.MediaPonderada(valores,pesos);
+       }
+       public float getMedia(){
+                return this.media;
        }
 }

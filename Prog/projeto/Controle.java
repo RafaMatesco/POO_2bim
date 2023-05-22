@@ -22,5 +22,8 @@ class Controle {//scanner de entrada de dados
     public Candidata[] deleteCandidata(Candidata dados[], String nome, ServiceCandidata serviceCandidata){
         dados = serviceCandidata.deleteCandidata(dados, nome);
         return dados;
+    } 
+    public void relatorio(Candidata dados[], ServiceCandidata serviceCandidata, int cont){
+        serviceCandidata.relatar(dados,cont);
     }
 }

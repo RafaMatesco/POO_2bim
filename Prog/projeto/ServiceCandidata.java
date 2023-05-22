@@ -1,3 +1,3 @@
-class ServiceCandidata extends DeleteCandidata{
+class ServiceCandidata extends Relatorio{
     
 }

@@ -21,6 +21,7 @@ class SetCandidata {
         dados.setSimpatia(Simpatia);
         dados.setElegancia(Elegancia);
         dados.setBeleza(Beleza);
+        dados.setMediaPonderada(new Media());
         return dados;
 }
 }

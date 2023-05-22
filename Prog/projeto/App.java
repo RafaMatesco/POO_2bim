@@ -46,9 +46,11 @@ public class App {
                                         System.out.print("Digite o nome da candidata que deseja excluir: ");
                                         String nomeDelete = entradas.next();
                                         candidatas = controle.deleteCandidata(candidatas, nomeDelete,serviceCandidata);
+                                        cont--;
                                         
                                         break;
                                 case 5:
+                                        controle.relatorio(candidatas, serviceCandidata, cont);
 
                                         break;
                                 case 6:
