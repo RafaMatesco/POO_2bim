@@ -10,8 +10,12 @@ class DeleteCandidata extends UpdateCandidata{
             }
             if(deletado){
                 dados[i] = dados[i+1];
+               
             }
             i++;
+        } 
+        if(deletado){
+            System.out.println("Deletada com sucesso");
         }
         dados[i] = null;
         return dados;

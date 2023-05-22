@@ -15,7 +15,7 @@ class Relatorio extends DeleteCandidata{
             }
         }
         int colocacao = 1;
-        
+        System.out.println("");
         for(int i=0; i < cont; i++){
             if(dados[i+1] != null){
                 if(dados[i].getMedia() == dados[i+1].getMedia()){
