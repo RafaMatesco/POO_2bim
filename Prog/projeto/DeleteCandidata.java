@@ -6,11 +6,10 @@ class DeleteCandidata extends UpdateCandidata{
         while (dados[i]!= null){
             if(dados[i].getNome().equals(nome)){
                 deletado = true;
-               
             }
             if(deletado){
                 dados[i] = dados[i+1];
-               
+                
             }
             i++;
         } 

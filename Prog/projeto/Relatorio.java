@@ -19,13 +19,13 @@ class Relatorio extends DeleteCandidata{
         for(int i=0; i < cont; i++){
             if(dados[i+1] != null){
                 if(dados[i].getMedia() == dados[i+1].getMedia()){
-                    System.out.println(colocacao+"o.- "+ dados[i].getNome() +"| nota:"+dados[i].getMedia());
+                    System.out.printf("%do.- %s | nota: %.2f\n", colocacao, dados[i].getNome(), dados[i].getMedia());
                 }else{
-                    System.out.println(colocacao+"o.- "+ dados[i].getNome() +"| nota:"+dados[i].getMedia());
+                    System.out.printf("%do.- %s | nota: %.2f\n", colocacao, dados[i].getNome(), dados[i].getMedia());
                     colocacao++;
                 }
             }else{
-                System.out.println(colocacao+"o.- "+ dados[i].getNome() +"| nota:"+dados[i].getMedia());
+                System.out.printf("%do.- %s | nota: %.2f\n", colocacao, dados[i].getNome(), dados[i].getMedia());
             }
 
         }
