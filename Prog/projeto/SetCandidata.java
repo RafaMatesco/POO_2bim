@@ -8,19 +8,34 @@ class SetCandidata {
         String nome = entradas.next();
 
         System.out.print("Nota de Simpatia:");
-        float Simpatia = entradas.nextFloat();
+
+        float simpatia = entradas.nextFloat();
+        while(simpatia>10 || simpatia<0){
+            System.out.print("valor invalido (entre 0 e 10)");
+            simpatia = entradas.nextFloat();
+
+        }
 
         System.out.print("Nota de Elegancia:");
-        float Elegancia = entradas.nextFloat();
+        float elegancia = entradas.nextFloat();
+        while(elegancia>10 || elegancia<0){
+            System.out.print("valor invalido (entre 0 e 10)");
+            elegancia = entradas.nextFloat();
+
+        }
 
         System.out.print("Nota de Beleza:");
-        float Beleza = entradas.nextFloat();
+        float beleza = entradas.nextFloat();
+        while(beleza>10 || beleza<0){
+            System.out.print("valor invalido (entre 0 e 10)");
+            beleza = entradas.nextFloat();
+        }
 
 
         dados.setNome(nome);
-        dados.setSimpatia(Simpatia);
-        dados.setElegancia(Elegancia);
-        dados.setBeleza(Beleza);
+        dados.setSimpatia(simpatia);
+        dados.setElegancia(elegancia);
+        dados.setBeleza(beleza);
         dados.setMediaPonderada(new Media());
         return dados;
 }

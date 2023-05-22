@@ -15,7 +15,7 @@ public class App {
 
                 Scanner entradas = new Scanner(System.in); //scanner de entrada de dados
                 while(resp == true){
-                        System.out.println("( 1 ) – Incluir\n( 2 ) – Consultar\n( 3 ) – Alterar\n( 4 ) – Excluir\n( 5 ) – Relatar\n( 6 ) – Sair");
+                        System.out.println("( 1 ) - Incluir\n( 2 ) - Consultar\n( 3 ) - Alterar\n( 4 ) - Excluir\n( 5 ) - Relatar\n( 6 ) - Sair");
                         menu = Integer.parseInt(entradas.next());
                         switch(menu){
                                 case 1:
